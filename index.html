@@ -10,10 +10,11 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f7f7f7;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #f40000;
             color: white;
             padding: 1rem;
             text-align: center;
@@ -34,12 +35,29 @@
             text-decoration: none;
         }
 
-                   padding: 2rem;
+        section {
+            padding: 2rem;
         }
 
         section img {
             display: block;
             margin: 1rem auto;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 1rem;
+            padding: 1rem;
+            width: 200px;
+            text-align: center;
         }
 
         form {
@@ -59,7 +77,7 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #f40000;
             color: white;
             border: none;
             padding: 1rem;
@@ -67,11 +85,12 @@
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #d00000;
         }
 
         footer {
-            background-color: #f1f1f1;
+            background-color: #333;
+            color: white;
             text-align: center;
             padding: 1rem;
             position: fixed;
@@ -88,6 +107,7 @@
             <ul>
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#historia">História</a></li>
+                <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#vendas">Vendas</a></li>
                 <li><a href="#consumo">Consumo Global</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -100,8 +120,33 @@
     </section>
     <section id="historia">
         <h2>História da Coca-Cola</h2>
-        <p>A história da Coca-Cola começou em 1886, quando John Stith Pemberton criou a fórmula original da bebida em Atlanta, EUA.</p>
+        <p>A história da Coca-Cola começou em 1886, quando John Stith Pemberton criou a fórmula original da bebida em Atlanta, EUA[1](https://awari.com.br/identidade-visual-da-coca-cola-o-poder-da-identidade-visual-da-coca-cola/).</p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Coca-Cola_logo.svg" alt="Logo da Coca-Cola" width="200">
+    </section>
+    <section id="produtos">
+        <h2>Produtos</h2>
+        <div class="products">
+            <div class="product">
+                <h3>Coca-Cola</h3>
+                <img src="https://www.coca-cola.com/content/dam/journey/us/en/private/2021/02/24/coca-cola-original-taste-12oz-12pk-hero.png" alt="Coca-Cola" width="100">
+                <p>A bebida clássica e refrescante.</p>
+            </div>
+            <div class="product">
+                <h3>Diet Coke</h3>
+                <img src="https://www.coca-cola.com/content/dam/journey/us/en/private/2021/02/24/diet-coke-12oz-12pk-hero.png" alt="Diet Coke" width="100">
+                <p>A versão sem açúcar da Coca-Cola.</p>
+            </div>
+            <div class="product">
+                <h3>Fanta</h3>
+                <img src="https://www.coca-cola.com/content/dam/journey/us/en/private/2021/02/24/fanta-orange-12oz-12pk-hero.png" alt="Fanta" width="100">
+                <p>Refrigerante com sabor de frutas.</p>
+            </div>
+            <div class="product">
+                <h3>Sprite</h3>
+                <img src="https://www.coca-cola.com/content/dam/journey/us/en/private/2021/02/24/sprite-12oz-12pk-hero.png" alt="Sprite" width="100">
+                <p>Refrigerante de limão e lima.</p>
+            </div>
+        </div>
     </section>
     <section id="vendas">
         <h2>Gráfico de Vendas</h2>
@@ -132,7 +177,7 @@
     </section>
     <section id="consumo">
         <h2>Consumo Global</h2>
-        <p>Os países que mais consomem Coca-Cola são os Estados Unidos, México, China, Brasil e Japão.</p>
+        <p>Os países que mais consomem Coca-Cola são os Estados Unidos, México, China, Brasil e Japão[2](https://designpravaler.com/coca-cola-analise-visual/).</p>
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/World_map_blank_without_borders.svg" alt="Mapa Global de Consumo" width="400">
     </section>
     <section id="contato">
