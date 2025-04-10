@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Projeto Coca-Cola</title>
+  <title>Coca ou Cola?</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
   <style>
     * {
@@ -14,7 +14,7 @@
 
     body {
       font-family: 'Raleway', sans-serif;
-      background: linear-gradient(135deg, #ff0000, #8b0000);
+      background: linear-gradient(135deg, #ff0000, #7a0000);
       color: white;
       min-height: 100vh;
       display: flex;
@@ -22,31 +22,38 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      padding: 20px;
       overflow: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .logo {
+      width: 250px;
+      margin-bottom: 20px;
+      animation: float 4s ease-in-out infinite;
     }
 
     h1 {
       font-size: 3rem;
       margin-bottom: 10px;
-      animation: fadeIn 1.5s ease-in-out;
+      text-shadow: 2px 2px #00000044;
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 30px;
       max-width: 600px;
-      animation: fadeIn 2s ease-in-out;
     }
 
-    .coke-img {
-      width: 180px;
+    .bottle {
+      width: 120px;
       height: auto;
-      animation: float 3s ease-in-out infinite;
+      margin-bottom: 30px;
+      animation: floatBottle 3s ease-in-out infinite;
     }
 
     .btn {
-      margin-top: 30px;
-      background-color: #fff;
+      background: linear-gradient(45deg, #fff, #e6e6e6);
       color: #d40000;
       padding: 15px 30px;
       border-radius: 30px;
@@ -54,46 +61,55 @@
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.3s;
-      animation: fadeIn 2.5s ease-in-out;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .btn:hover {
-      background-color: #ffe5e5;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
     footer {
       position: absolute;
-      bottom: 20px;
+      bottom: 10px;
       font-size: 0.8rem;
       color: #fcdede;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes floatBottle {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-10px) rotate(1deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 600px) {
       h1 { font-size: 2rem; }
       p { font-size: 1rem; }
-      .coke-img { width: 140px; }
+      .logo { width: 180px; }
+      .bottle { width: 90px; }
     }
   </style>
 </head>
 <body>
-  <h1>Projeto Coca-Cola</h1>
-  <p>Bem-vindo à landing page oficial do projeto Coca-Cola no GitHub. Esse é o início de algo grande!</p>
-  <img class="coke-img" src="https://i.imgur.com/L7jvHje.png" alt="Coca-Cola Bottle" />
-  <a href="https://github.com/mrBRITOz/repositorio-coca-cola" target="_blank">
-    <button class="btn">Ver no GitHub</button>
+  <img class="logo" src="https://1000marcas.net/wp-content/uploads/2020/01/Coca-Cola-logo.png" alt="Coca-Cola Logo">
+  <h1>Projeto Coca ou Cola?</h1>
+  <p>Esse é o primeiro projeto do repositório — feito com estilo, código e criatividade.</p>
+  <img class="bottle" src="https://i.imgur.com/L7jvHje.png" alt="Garrafa Coca-Cola">
+  <a href="https://github.com/mrBRITOz/Coca-ou-Cola-" target="_blank">
+    <button class="btn">Ver Repositório</button>
   </a>
-  <footer>Desenvolvido por mrBRITOz & ChatGPT • 2025</footer>
+  <footer>Desenvolvido por mrBRITOz • 2025</footer>
 </body>
 </html>
