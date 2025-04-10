@@ -1,246 +1,154 @@
-[18:52, 10/04/2025] Elon Musk: <!DOCTYPE html>
-<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Coca-Cola Experience</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Coca-Cola</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Arial', sans-serif;
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
 
-    header {
-      height: 100vh;
-      background: linear-gradient(180deg, #ff0000, #8b0000);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
 
-    header h1 {
-      font-size: 4rem;
-      color: #fff;
-      text-shadow: 2px 2px 10px #000;
-      animation: pop 2s ease-in-out forwards;
-    }
+        nav ul li {
+            display: inline;
+            margin: 0 1rem;
+        }
 
-    @keyframes pop {
-      0% {
-        opacity: 0;
-        transform: scale(0.6);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
 
-    .scroll-down {
-      position: absolute;
-      bottom: 30px;
-      font-size: 1rem;
-      color: #fff;
-      animation: bounce 2s infinite;
-      text-decoration: none;
-    }
+                   padding: 2rem;
+        }
 
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(10px);
-      }
-    }
+        section img {
+            display: block;
+            margin: 1rem auto;
+        }
 
-    section {
-      min-height: 100vh;
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: all 0.7s ease-out;
-    }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
 
-    section.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+        form label {
+            margin-bottom: 0.5rem;
+        }
 
-    .section-title {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #ffe600;
-    }
+        form input, form textarea {
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
 
-    .section-content {
-      max-width: 800px;
-      text-align: center;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
-  </style>
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
-  <header>
-    <h1>Bem-vindo ao Universo Coca-Cola</h1>
-    <a href="#historia" class="scroll-down">↓ Role para saber mais</a>
-  </header>
-
-  <section id="historia">
-    <h2 class="section-title">Nossa História</h2>
-    <p class="section-content">
-      A Coca-Cola nasceu em 1886 em Atlanta, criada por John Pemberton. Desde então, se tornou um dos maiores ícones do mundo, com presença em mais de 200 países. Vamos explorar essa jornada juntos.
-    </p>
-  </section>
-
-  <script>
-    const sections = document.querySelectorAll('section');
-
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.85;
-
-      sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-
-        if (sectionTop < triggerBottom) {
-          section.classList.add('visible');
-        }
-      });
-    };
-
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-  </script>
-
+    <header>
+        <h1>Bem-vindo à Landing Page da Coca-Cola</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#vendas">Vendas</a></li>
+                <li><a href="#consumo">Consumo Global</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="sobre">
+        <h2>Sobre a Coca-Cola</h2>
+        <p>A Coca-Cola é uma das marcas mais conhecidas e consumidas no mundo, presente em mais de 200 países.</p>
+    </section>
+    <section id="historia">
+        <h2>História da Coca-Cola</h2>
+        <p>A história da Coca-Cola começou em 1886, quando John Stith Pemberton criou a fórmula original da bebida em Atlanta, EUA.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Coca-Cola_logo.svg" alt="Logo da Coca-Cola" width="200">
+    </section>
+    <section id="vendas">
+        <h2>Gráfico de Vendas</h2>
+        <canvas id="salesChart" width="400" height="200"></canvas>
+        <script>
+            const ctx = document.getElementById('salesChart').getContext('2d');
+            const salesChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+                    datasets: [{
+                        label: 'Vendas da Coca-Cola (em bilhões)',
+                        data: [44.3, 41.9, 35.4, 31.9, 37.3, 33.0, 38.7, 40.4, 42.3, 45.1],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+    </section>
+    <section id="consumo">
+        <h2>Consumo Global</h2>
+        <p>Os países que mais consomem Coca-Cola são os Estados Unidos, México, China, Brasil e Japão.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8a/World_map_blank_without_borders.svg" alt="Mapa Global de Consumo" width="400">
+    </section>
+    <section id="contato">
+        <h2>Contato</h2>
+        <form action="https://example.com/submit" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 Minha Empresa. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
-[18:52, 10/04/2025] Elon Musk: <section id="timeline">
-  <h2 class="section-title">Linha do Tempo</h2>
-  <div class="section-content">
-    <ul style="list-style: none; padding: 0;">
-      <li style="margin-bottom: 40px;">
-        <h3 style="color: #ff4d4d;">1886</h3>
-        <p>O farmacêutico John Pemberton cria a Coca-Cola, vendida inicialmente em farmácias.</p>
-      </li>
-      <li style="margin-bottom: 40px;">
-        <h3 style="color: #ff4d4d;">1915</h3>
-        <p>É criada a icônica garrafa contornada da Coca-Cola.</p>
-      </li>
-      <li style="margin-bottom: 40px;">
-        <h3 style="color: #ff4d4d;">1971</h3>
-        <p>Lançamento da campanha "I'd Like to Buy the World a Coke", um marco na publicidade.</p>
-      </li>
-      <li style="margin-bottom: 40px;">
-        <h3 style="color: #ff4d4d;">2000+</h3>
-        <p>A Coca-Cola se consolida como uma das marcas mais conhecidas do planeta.</p>
-      </li>
-    </ul>
-  </div>
-</section>
-[18:52, 10/04/2025] Elon Musk: <section id="galeria">
-  <h2 class="section-title">Produtos Icônicos</h2>
-  <div class="gallery">
-    <div class="product">
-      <img src="https://i.imgur.com/BtP9Mu0.png" alt="Coca-Cola Clássica" />
-      <p>Coca-Cola Clássica</p>
-    </div>
-    <div class="product">
-      <img src="https://i.imgur.com/xBk7s4D.png" alt="Coca-Cola Zero" />
-      <p>Coca-Cola Zero</p>
-    </div>
-    <div class="product">
-      <img src="https://i.imgur.com/C5M0kXN.png" alt="Coca-Cola Light" />
-      <p>Coca-Cola Light</p>
-    </div>
-  </div>
-</section>
-
-<style>
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-  }
-
-  .product {
-    background: #111;
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .product img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .product p {
-    color: #fff;
-    font-weight: bold;
-  }
-
-  .product:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #ff0000aa;
-  }
-</style>
-[18:52, 10/04/2025] Elon Musk: <footer>
-  <div class="footer-container">
-    <p>© 2025 Coca-Cola Experience — Projeto feito por <strong>mrBRITOz</strong></p>
-    <div class="social-icons">
-      <a href="https://github.com/mrBRITOz" target="_blank">GitHub</a>
-      <a href="#">Instagram</a>
-      <a href="#">LinkedIn</a>
-    </div>
-  </div>
-</footer>
-
-<style>
-  footer {
-    background: #111;
-    color: #fff;
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .footer-container {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-
-  .social-icons {
-    margin-top: 15px;
-  }
-
-  .social-icons a {
-    margin: 0 10px;
-    color: #ff0000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-
-  .social-icons a:hover {
-    color: #ffe600;
-  }
-</style>
